@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrapServers: localhost:9092
+    producer:
+      valueSerializer: org.apache.kafka.common.serialization.StringSerializer
+      keySerializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      autoOffsetReset: earliest
+      groupId: your_group_id
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    bootstrapServers: b-1.ursaakafkacluster.8g498y.c7.kafka.us-east-1.amazonaws.com:9092,b-2.ursaakafkacluster.8g498y.c7.kafka.us-east-1.amazonaws.com:9092,b-1.ursaakafkacluster.8g498y.c7.kafka.us-east-1.amazonaws.com:9094,b-2.ursaakafkacluster.8g498y.c7.kafka.us-east-1.amazonaws.com:9094
+    topic:
+      name: YOUR_TOPIC
+influxdb:
+  url: http://localhost:8086
+  bucket: ursaa
+  org: ursaa
+  token: x9hui-4S-khmbegvH9yxeqwgU0xRdcWC5aB_sB6ehz8bdEukV_TbWYnbnzz1yCVAMmriXukkFYYgJgjlm5Zybg==
